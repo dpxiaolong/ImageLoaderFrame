@@ -46,12 +46,18 @@
                 //因为在处理器核数以内效率是增长，大于后由于存在任务调度等消耗，效率反而会下降
                 .setThreadCount(4);
         //第三步：初始化加载器
+        
         SimpleImageLoader.getInstance().init(imageLoaderConfig);
         //网络图片路径直接Uri即可
         String pathTest = "https://img12.360buyimg.com/red/jfs/t14662/206/484370755/204243/be01c580/5a2f8866N2a94ffe8.jpg";
+        
         //本地图片示例，需要自己加上schema前缀file://
+        
 //        String pathTest2 = "file:///data/data/com.example.luozhenlong.myapplication/a.JPG";
+
         //第四步：加载图片
+        
         SimpleImageLoader.getInstance().displayImage(mImageview,pathTest);
+        
 
 
