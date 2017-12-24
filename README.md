@@ -59,5 +59,16 @@
         
         SimpleImageLoader.getInstance().displayImage(mImageview,pathTest);
         
+        @Override
+        protected void onDestroy() {
+
+    //第五步，退出时记得关闭线程资源
+    
+      SimpleImageLoader.getInstance().release();
+    
+      super.onDestroy();
+       }
+
+
 
 
