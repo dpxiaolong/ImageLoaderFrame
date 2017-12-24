@@ -53,7 +53,7 @@
         
         //本地图片示例，需要自己加上schema前缀file://
         
-//        String pathTest2 = "file:///data/data/com.example.luozhenlong.myapplication/a.JPG";
+        //String pathTest2 = "file:///data/data/com.example.luozhenlong.myapplication/a.JPG";
 
         //第四步：加载图片
         
