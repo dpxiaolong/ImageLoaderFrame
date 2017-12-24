@@ -104,12 +104,19 @@ public class MainActivity extends AppCompatActivity {
         //本地图片示例，需要自己加上schema前缀file://
 //        String pathTest2 = "file:///data/data/com.example.luozhenlong.myapplication/a.JPG";
         //第四步：加载图片
-        SimpleImageLoader.getInstance().displayImage(mImageview,pathTest);
+        SimpleImageLoader.getInstance().displayImage(mImageview, pathTest);
 
 
         //初始化控件
         initGridView();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        //关闭线程资源
+        SimpleImageLoader.getInstance().release();
+        super.onDestroy();
     }
 
     /**
@@ -151,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(ImageView imageView, Bitmap bitmap, String uri) {
                     Log.i(TAG, "onComplete enter");
-                        imageView.setImageBitmap(bitmap);
+                    imageView.setImageBitmap(bitmap);
                 }
             });
 

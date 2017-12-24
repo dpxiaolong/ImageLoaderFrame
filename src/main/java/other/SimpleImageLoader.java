@@ -98,6 +98,13 @@ public class SimpleImageLoader {
     }
 
     /**
+     * 关闭用于请求的线程
+     */
+    public void release(){
+        mImageQueue.stop();
+    }
+
+    /**
      * 检查配置，做一些默认配置设置
      */
     private void checkConfig() {
